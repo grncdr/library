@@ -11,6 +11,9 @@ gem "rails", "3.0.0.beta"
 # Rails has selected sqlite3.
 gem "sqlite3-ruby", :require => "sqlite3"
 
+# For looking up book info on amazon
+gem "ruby-aaws", :require => "amazon"
+
 gem 'paperclip', :git => 'git://github.com/JasonKing/paperclip.git', :branch => 'rails3'
 
 ## Bundle the gems you use:

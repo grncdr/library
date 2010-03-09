@@ -1,5 +1,9 @@
 Library::Application.routes.draw do |map|
-  resources :books
+  resources :books do
+    collection do
+      get :lookup
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
