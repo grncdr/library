@@ -24,7 +24,7 @@ class BooksController < ApplicationController
   # GET /books/new
   # GET /books/new.xml
   def new
-    @book = Book.new
+    @book = Book.new :copies => 1
 
     respond_to do |format|
       format.html # new.html.erb
@@ -98,7 +98,7 @@ class BooksController < ApplicationController
     attr = item.item_attributes[0]
 
     # HACK! just grab a review as summary. TODO: something smarter.
-    review = item.editorial_reviews[0].editorial_review[0].content[0].to_s rescue nil
+    review = CGI.unescape_html(item.editorial_reviews[0].editorial_review[0].content[0].to_s) rescue nil
 
     @book = {:summary => review}
     getattr.each do |a|

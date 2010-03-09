@@ -23,7 +23,7 @@
     <td><%= book.title %></td>
     <td><%= book.subtitle %></td>
     <td><%= book.author %></td>
-    <td><%= book.summary %></td>
+    <td><%= truncate book.summary, 50 %></td>
     <td><%= book.publisher %></td>
     <td><%= book.edition %></td>
     <td><%= book.details %></td>
