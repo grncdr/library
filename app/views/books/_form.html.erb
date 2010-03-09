@@ -1,0 +1,43 @@
+<% form_for(@book) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.label :copies %><br />
+    <%= f.text_field :copies %>
+  </div>
+  <div class="field">
+    <%= f.label :isbn %><br />
+    <%= f.text_field :isbn %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitle %><br />
+    <%= f.text_field :subtitle %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br />
+    <%= f.text_area :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :publisher %><br />
+    <%= f.text_field :publisher %>
+  </div>
+  <div class="field">
+    <%= f.label :edition %><br />
+    <%= f.text_field :edition %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br />
+    <%= f.text_field :details %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

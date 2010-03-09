@@ -1,0 +1,48 @@
+<p>
+  <b>Copies:</b>
+  <%= @book.copies %>
+</p>
+
+<p>
+  <b>Isbn:</b>
+  <%= @book.isbn %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @book.title %>
+</p>
+
+<p>
+  <b>Subtitle:</b>
+  <%= @book.subtitle %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @book.author %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @book.summary %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%= @book.publisher %>
+</p>
+
+<p>
+  <b>Edition:</b>
+  <%= @book.edition %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @book.details %>
+</p>
+
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
