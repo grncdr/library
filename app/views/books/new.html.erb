@@ -1,3 +1,9 @@
+<% content_for :head do%>
+  <% javascript_tag do %>
+    Event.observe(window, 'load', function() { $('book_isbn').activate(); });
+  <% end %>
+<% end %>
+
 <h1>New book</h1>
 
 <%= render 'form' %>

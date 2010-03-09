@@ -8,6 +8,7 @@
   <div class="field">
     <%= f.label :isbn %><br />
     <%= f.text_field :isbn %>
+    <%= f.submit 'Lookup', :onclick => 'lookup(this.form); return false;' %>
   </div>
   <div class="field">
     <%= f.label :title %><br />
