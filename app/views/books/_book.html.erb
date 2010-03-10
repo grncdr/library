@@ -1,0 +1,24 @@
+<div style="clear:both; width: 80%">
+  <h2><%= book.title %></h2>
+  <% unless book.subtitle.blank? %>
+    <h3><%= book.subtitle %></h3>
+  <% end %>
+<div style="float: left; width: 150px; margin-right: 20px;">
+  <div style="width: 150px; height: 250px; background: url(<%= book.cover.url(:small) %>) top center no-repeat;"></div>
+</div>
+<div style="float: left; width: 70%;">
+  Copies: <%= book.copies_remaining %>/<%= book.copies %><br/>
+  ISBN: <%= book.isbn %><br/>
+  Author: <%= book.author %><br/>
+  Publisher: <%= book.publisher %><br/>
+  Edition: <%= book.edition %><br/>
+  Details: <%= book.details %><br/>
+  Summary:<br/><%= truncate book.summary, 500 %><br/>
+  <br/>
+  <%= link_to 'Show', book %><br/>
+  <%= link_to 'Edit', edit_book_path(book) %><br/>
+  <%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %><br/>
+</div>
+<div style="clear:both; width: 80%"></div>
+</div>
+<hr/>
